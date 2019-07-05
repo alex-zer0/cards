@@ -1,0 +1,13 @@
+<section *ngIf="(users$ | async) as users; else loading">
+  <app-cards-list [users]="users.data"></app-cards-list>
+
+  <app-pagination
+    [page]="users.page"
+    [total]="users.total_pages"
+    (setPage)="setPage($event)">
+  </app-pagination>
+</section>
+
+<ng-template #loading>
+  Loading...
+</ng-template>
