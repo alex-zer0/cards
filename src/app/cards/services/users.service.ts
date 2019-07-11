@@ -2,21 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { of } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
-
-export interface User {
-  id: number;
-  avatar: string;
-  email: string;
-  first_name: string;
-  last_name: string;
-}
-export interface Paged<T> {
-  data: T[];
-  page: number;
-  per_page: number;
-  total: number;
-  total_pages: number;
-}
+import { User } from '../interfaces/user';
+import { Paged } from '../interfaces/paged';
 
 const USERS_CACHE = new Map();
 

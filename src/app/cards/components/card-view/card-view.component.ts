@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { User, UsersService } from '../services/users.service';
+import { UsersService } from '../../services/users.service';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
+import { User } from '../../interfaces/user';
 
 @Component({
-  selector: 'app-cards',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  selector: 'app-card-view',
+  templateUrl: './card-view.component.html',
+  styleUrls: ['./card-view.component.scss']
 })
-export class CardComponent implements OnInit {
+export class CardViewComponent implements OnInit {
   user$: Observable<User>;
 
   constructor(

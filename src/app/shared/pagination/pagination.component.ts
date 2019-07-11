@@ -3,12 +3,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-pagination',
   template: `
-    <button *ngIf="isPrevAvailable" (click)="setPage.emit(page - 1)">PREV</button>
-    <button *ngIf="isNextAvailable" (click)="setPage.emit(page + 1)">NEXT</button>
+    <div class="pagination">
+      <button *ngIf="isPrevAvailable" class="pagination__btn" (click)="setPage.emit(page - 1)">PREV</button>
+      <button *ngIf="isNextAvailable" class="pagination__btn" (click)="setPage.emit(page + 1)">NEXT</button>
+    </div>
   `,
-  styles: [`
-    :host { padding: 1rem }
-  `]
+  styleUrls: ['./pagination.component.scss']
 })
 export class PaginationComponent {
   @Input() page: number;

@@ -1,0 +1,17 @@
+.card {
+  padding: 2rem 1rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: .25rem;
+
+  &__title {
+    margin: 0 0 1rem;
+  }
+
+  &__back-link {
+    color: #000;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

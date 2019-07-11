@@ -1,0 +1,22 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+
+  &__btn {
+    padding: .5rem .75rem;
+    border-radius: .25rem;
+    background-color: #fff;
+    transition: background-color .15s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ccc;
+    }
+
+    & + .pagination__btn {
+      margin-left: .5rem;
+    }
+  }
+}

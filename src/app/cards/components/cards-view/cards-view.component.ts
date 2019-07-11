@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService, Paged, User } from '../services/users.service';
+import { UsersService } from '../../services/users.service';
 import { Observable, Subject } from 'rxjs';
 import { startWith, distinctUntilChanged, switchMap } from 'rxjs/operators';
+import { User } from '../../interfaces/user';
+import { Paged } from '../../interfaces/paged';
 
 @Component({
-  selector: 'app-cards',
-  templateUrl: './cards.component.html'
+  selector: 'app-cards-view',
+  templateUrl: './cards-view.component.html'
 })
-export class CardsComponent implements OnInit {
+export class CardsViewComponent implements OnInit {
   users$: Observable<Paged<User>>;
   pageNumber$ = new Subject<number>();
 
